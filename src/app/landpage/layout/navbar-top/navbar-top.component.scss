@@ -1,0 +1,108 @@
+.navbar-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.6);
+
+  .logo {
+    background-image: url('/assets/logos/Volent-claro.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    width: 460px;
+    height: 270px;
+    flex-shrink: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .center-nav button.mat-mdc-button {
+    font-weight: 500;
+    text-transform: none;
+    border-radius: 999px;
+    padding: 6px 18px;
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+
+    mat-icon {
+      margin-right: 6px;
+      color: #f5f5f5;
+    }
+
+    &:hover {
+      background-color: #3d3d3d;
+      color: #ffffff;
+      mat-icon {
+        color: #ffffff;
+      }
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      background-color: #1f1f1f;
+      color: #f5f5f5;
+      mat-icon {
+        color: #f5f5f5;
+      }
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+      transform: translateY(0);
+    }
+  }
+
+  .right-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: inline-flex !important;
+  }
+
+  ::ng-deep .mobile-menu {
+    min-width: 220px;
+    .mat-mdc-menu-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 8px 0;
+    }
+
+    button.mat-menu-item {
+      width: 100%;
+      justify-content: flex-start;
+      font-size: 0.95rem;
+
+      mat-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .desktop-only {
+    display: flex !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}

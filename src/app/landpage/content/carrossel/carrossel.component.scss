@@ -1,0 +1,150 @@
+/* Estilos para o Indicador de Carregamento */
+.loading-overlay {
+  position: fixed; /* Usa posição fixa para cobrir toda a tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+  z-index: 9999; /* Certifique-se de que está acima de outros elementos */
+
+  .loading-text {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;    
+  }
+}
+
+/* Estilos do Carrossel */
+.carousel-container {
+  margin-top: 20px;
+  position: relative;
+  width: 100vw; /* Ocupa toda a largura da viewport */
+  height: 100vh; /* Ocupa a altura completa da viewport */
+  overflow: hidden;
+
+  .carousel-wrapper {
+    position: relative;
+    height: 100vh;
+  }
+
+  .carousel-item {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    /* Definição do vídeo ou imagem */
+    img.carousel-image,
+    video.carousel-video {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-caption {
+      backdrop-filter: blur(5px);
+      background-color: rgba(113, 97, 97, 0.656); /* Cor preta com 50% de transparência */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: whitesmoke;
+      z-index: 2;
+
+      h1.title {
+        font-size: 2rem;
+      }
+
+      p.subtitle-services {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  /* Controles do carrossel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: white;
+    z-index: 3;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .carousel-control-prev {
+    left: 20px;
+  }
+
+  .carousel-control-next {
+    right: 20px;
+  }
+
+
+  /* Media Queries para ajuste em telas maiores */
+  @media (min-width: 768px) {
+    .carousel-caption {
+      bottom: 15%;
+
+      h1.title {
+        font-size: 2.5rem;
+      }
+
+      p.subtitle-services {
+        font-size: 1.5rem;
+      }
+    }
+
+    .carousel-indicators {
+      bottom: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-caption {
+      bottom: 10%;
+
+      h1.title {
+        font-size: 3rem;
+      }
+
+      p.subtitle-services {
+        font-size: 1.8rem;
+      }
+    }
+
+    .carousel-indicators {
+      bottom: 30px;
+    }
+  }
+}
+
+/* Evita barras de rolagem horizontais */
+body {
+  overflow-x: hidden;
+}

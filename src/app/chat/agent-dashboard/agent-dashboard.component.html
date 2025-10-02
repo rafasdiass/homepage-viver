@@ -1,0 +1,29 @@
+<!-- agent-dashboard.component.html -->
+<div class="agent-dashboard">
+  <h2>Painel do Agente</h2>
+  <div class="conversations-list">
+    <h3>Conversas</h3>
+    <ul>
+      <li *ngFor="let conversation of conversations" (click)="selectConversation(conversation)">
+        {{ conversation.friendlyName || conversation.uniqueName }}
+      </li>
+    </ul>
+  </div>
+  <div class="conversation-window" *ngIf="selectedConversation">
+    <h3>
+      Conversa:
+      {{ selectedConversation.friendlyName || selectedConversation.uniqueName }}
+    </h3>
+    <div class="messages-window">
+      <div *ngFor="let msg of messages" class="message" [ngClass]="msg.sender === identity ? 'agent' : 'user'">
+        <span>{{ msg.sender }}: {{ msg.content }}</span>
+        <span class="timestamp">{{ msg.timestamp | date: 'shortTime' }}</span>
+      </div>
+    </div>
+    <div class="message-input">
+      <input type="text" [(ngModel)]="newMessageContent" placeholder="Digite sua mensagem..."
+        (keydown.enter)="sendMessage()" />
+      <button (click)="sendMessage()">Enviar</button>
+    </div>
+  </div>
+</div>

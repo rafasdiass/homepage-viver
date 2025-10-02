@@ -1,0 +1,63 @@
+<mat-toolbar class="navbar-top">
+  <!-- Logo -->
+  <div class="logo"></div>
+
+  <span class="spacer"></span>
+
+  <!-- Menu central (desktop) -->
+  <nav class="center-nav desktop-only">
+    <button mat-button (click)="navegarPara('home', $event)">
+      <mat-icon>home</mat-icon> Home
+    </button>
+    <button mat-button (click)="navegarPara('servicos', $event)">
+      <mat-icon>build</mat-icon> Serviços
+    </button>
+    <button mat-button (click)="navegarPara('contato', $event)">
+      <mat-icon>mail</mat-icon> Seu Projeto
+    </button>
+    <button mat-button (click)="navegarPara('lacet-express', $event)">
+      <mat-icon>shopping_bag</mat-icon> Lacet Express
+    </button>
+    <button mat-button (click)="navegarPara('macenaria', $event)">
+      <mat-icon>handyman</mat-icon> Marcenaria
+    </button>
+  </nav>
+
+  <!-- Botão hamburguer (mobile) -->
+  <button mat-icon-button class="mobile-only" [matMenuTriggerFor]="mobileMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- Menu Mobile -->
+  <mat-menu #mobileMenu="matMenu" class="mobile-menu">
+    <button mat-menu-item (click)="navegarPara('home', $event)">
+      <mat-icon>home</mat-icon> Home
+    </button>
+    <button mat-menu-item (click)="navegarPara('servicos', $event)">
+      <mat-icon>build</mat-icon> Serviços
+    </button>
+    <button mat-menu-item (click)="navegarPara('contato', $event)">
+      <mat-icon>mail</mat-icon> Seu Projeto
+    </button>
+    <button mat-menu-item (click)="navegarPara('lacet-express', $event)">
+      <mat-icon>shopping_bag</mat-icon> Lacet Express
+    </button>
+    <button mat-menu-item (click)="navegarPara('macenaria', $event)">
+      <mat-icon>handyman</mat-icon> Marcenaria
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <!-- Alternar Tema -->
+    <button mat-menu-item (click)="toggleTheme()">
+      <mat-icon>light_mode</mat-icon> Alternar Tema
+    </button>
+  </mat-menu>
+
+  <!-- Menu à direita (desktop) -->
+  <div class="right-nav desktop-only">
+    <button mat-icon-button (click)="toggleTheme()">
+      <mat-icon>light_mode</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

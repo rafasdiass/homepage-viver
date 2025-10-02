@@ -1,0 +1,6 @@
+<!-- chat-input.component.html -->
+<div class="chat-input-container">
+  <input type="text" [(ngModel)]="message" placeholder="Digite sua mensagem..." (keydown.enter)="sendMessage()"
+    class="chat-input-field" />
+  <button (click)="sendMessage()" class="send-button">Enviar</button>
+</div>

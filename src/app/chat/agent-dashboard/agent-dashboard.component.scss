@@ -1,0 +1,60 @@
+/* agent-dashboard.component.scss */
+
+.agent-dashboard {
+    display: flex;
+  }
+  
+  .conversations-list {
+    width: 200px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .conversations-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .conversations-list li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .conversations-list li.selected {
+    background-color: #e0e0e0;
+  }
+  
+  .chat-window {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .messages {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .agent-message {
+    text-align: right;
+    color: blue;
+  }
+  
+  .user-message {
+    text-align: left;
+    color: green;
+  }
+  
+  .message-input {
+    margin-top: 10px;
+  }
+  
+  .message-input input {
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .message-input button {
+    padding: 5px 10px;
+  }
+  

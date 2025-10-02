@@ -1,0 +1,123 @@
+/* Estilos para o Contêiner - Mobile First */
+
+.container {
+  margin-top: 2rem;
+  padding: 0 1rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .form-group {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 0.5rem;
+      }
+
+      select {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        background-color: #fff;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        &:focus {
+          border-color: #007bff;
+          background-color: #fff;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  /* Contêiner do Carrossel */
+  .carousel-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+/* Media Queries para telas maiores */
+
+@media (min-width: 576px) {
+  .container {
+    h2 {
+      font-size: 2rem;
+    }
+
+    form {
+      .form-group {
+        label {
+          font-size: 1.2rem;
+        }
+
+        select {
+          font-size: 1.1rem;
+          padding: 0.6rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-top: 3rem;
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      .form-group {
+        max-width: 600px;
+
+        label {
+          font-size: 1.25rem;
+        }
+
+        select {
+          font-size: 1.2rem;
+          padding: 0.75rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    margin-top: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .carousel-container {
+      max-width: 1000px;
+    }
+  }
+}

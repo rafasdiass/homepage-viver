@@ -1,0 +1,37 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="title-container">
+    <h2>Seu Projeto com a Assinatura Volent</h2>
+  </div>
+
+  <label for="nome">Nome</label>
+  <input id="nome" type="text" formControlName="nome" />
+  <div *ngIf="formulario.get('nome')?.touched && formulario.get('nome')?.invalid">
+    Nome é obrigatório.
+  </div>
+
+  <label for="email">Email</label>
+  <input id="email" type="email" formControlName="email" />
+  <div *ngIf="formulario.get('email')?.touched && formulario.get('email')?.invalid">
+    Informe um email válido.
+  </div>
+
+  <label for="telefone">Telefone</label>
+  <input id="telefone" type="text" formControlName="telefone" />
+  <div *ngIf="formulario.get('telefone')?.touched && formulario.get('telefone')?.invalid">
+    Telefone é obrigatório.
+  </div>
+
+  <label for="assunto">Assunto</label>
+  <input id="assunto" type="text" formControlName="assunto" />
+  <div *ngIf="formulario.get('assunto')?.touched && formulario.get('assunto')?.invalid">
+    Assunto é obrigatório.
+  </div>
+
+  <label for="mensagem">Mensagem</label>
+  <textarea id="mensagem" formControlName="mensagem"></textarea>
+  <div *ngIf="formulario.get('mensagem')?.touched && formulario.get('mensagem')?.invalid">
+    Escreva sua mensagem.
+  </div>
+
+  <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+</form>

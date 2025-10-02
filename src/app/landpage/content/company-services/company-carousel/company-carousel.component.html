@@ -1,0 +1,41 @@
+<!-- Componente do Carrossel -->
+<div
+  #companycarousel
+  id="companySolutionsCarousel"
+  class="company-solutions-carousel carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div
+      class="carousel-item"
+      *ngFor="let solution of solutions; let i = index"
+      [class.active]="i === 0"
+    >
+      <div class="carousel-img-wrapper">
+        <img [src]="solution.src" class="d-block" [alt]="solution.title" />
+      </div>
+      <div class="carousel-caption">
+        <h5>{{ solution.title }}</h5>
+      </div>
+    </div>
+  </div>
+
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#companySolutionsCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#companySolutionsCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>

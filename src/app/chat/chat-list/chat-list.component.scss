@@ -1,0 +1,19 @@
+.chat-list {
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  
+  .chat-item {
+    padding: 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .chat-item:hover {
+    background-color: #e9ecef;
+  }
+  

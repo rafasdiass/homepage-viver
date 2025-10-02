@@ -1,0 +1,27 @@
+.carousel-indicators {
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-60%); /* Ajuste o valor para mover mais para a esquerda */
+        width: auto;
+        display: flex;
+        gap: 20px;
+        z-index: 3;
+      }
+      
+  
+    .indicator {
+      width: 80px;           /* Largura aumentada */
+      height: 10px;          /* Altura aumentada */
+      background-color: rgba(255, 255, 255, 0.7); /* Levemente mais opaco */
+      cursor: pointer;
+      border-radius: 7.5px;  /* Ajuste do raio para combinar com a altura */
+      transition: background-color 0.3s;
+  
+      &.active-indicator {
+        background-color: #fff;
+      }
+    }
+  }
+  

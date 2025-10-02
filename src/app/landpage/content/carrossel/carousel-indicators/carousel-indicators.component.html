@@ -1,0 +1,9 @@
+<div class="carousel-indicators">
+    <span
+      *ngFor="let item of items; let i = index"
+      class="indicator"
+      [ngClass]="{ 'active-indicator': i === currentIndex }"
+      (click)="onIndicatorClick(i)"
+    ></span>
+  </div>
+  

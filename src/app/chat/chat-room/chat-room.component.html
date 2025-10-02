@@ -1,0 +1,30 @@
+<div class="chat-room-widget" [ngClass]="{ 'closed': !isChatOpen }">
+  <!-- Botão para abrir/fechar o chat -->
+  <button (click)="toggleChat()" class="toggle-chat-btn" [attr.aria-expanded]="isChatOpen"
+    aria-controls="chat-room-container">
+    <i class="bi" [ngClass]="{ 'bi-chat-right-dots': !isChatOpen, 'bi-x-lg': isChatOpen }"></i>
+  </button>
+
+  <!-- Container do chat -->
+  <div *ngIf="isChatOpen" id="chat-room-container" class="chat-room" role="region" aria-labelledby="chat-room-title">
+    <!-- Cabeçalho do Chat -->
+    <header class="chat-room-header" id="chat-room-title">
+      <h2>Fale com a gente</h2>
+    </header>
+
+    <!-- Lista de Chats -->
+    <section class="chat-list-section">
+      <app-chat-list (chatSelected)="onChatSelected($event)"></app-chat-list>
+    </section>
+
+    <!-- Janela de Mensagens -->
+    <section class="chat-window-section">
+      <app-chat-window [messages]="messages" [identity]="'user'"></app-chat-window>
+    </section>
+
+    <!-- Entrada de Mensagens -->
+    <section class="chat-input-section">
+      <app-chat-input (messageSent)="onMessageSent($event)"></app-chat-input>
+    </section>
+  </div>
+</div>

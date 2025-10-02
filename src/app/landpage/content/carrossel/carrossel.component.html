@@ -1,0 +1,71 @@
+<!-- Indicador de Carregamento -->
+<div
+  *ngIf="loading"
+  class="loading-overlay d-flex flex-column justify-content-center align-items-center"
+>
+  <div class="text-center">
+    <div class="spinner-border text-primary mb-3" role="status">
+      <span class="visually-hidden">Carregando...</span>
+    </div>
+    <div class="loading-text">LACET ARQUITETURA - LOADING</div>
+  </div>
+</div>
+
+<!-- Conteúdo do Carrossel -->
+<div class="carousel-container" *ngIf="!loading">
+  <div class="carousel-wrapper">
+    <!-- Itens do carrossel -->
+    <div
+      *ngFor="let item of items; let i = index"
+      class="carousel-item"
+      [ngClass]="{ active: i === currentIndex }"
+    >
+      <ng-container *ngIf="isVideo(item); else imageTemplate">
+        <video
+          #videoPlayer
+          class="carousel-video"
+          autoplay
+          loop
+          [muted]="true"
+          playsinline
+          (loadeddata)="onVideoLoaded()"
+          (error)="onVideoError($event)"
+        >
+          <source [src]="item.src" type="video/mp4" />
+        </video>
+      </ng-container>
+
+      <!-- Template para imagens -->
+      <ng-template #imageTemplate>
+        <img [src]="item.src" class="carousel-image" [alt]="item.title" />
+      </ng-template>
+
+      <!-- Legenda do carrossel -->
+      <div class="carousel-caption">
+        <h1 class="title">ESCRITÓRIO DE PROJETOS</h1>
+        <p class="subtitle-services">
+          Projetos de Arquitetura, Interiores, Estruturas, Elétricos,
+          Hidrossanitários
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles do carrossel -->
+  <button class="carousel-control-prev" (click)="prevSlide()">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" (click)="nextSlide()">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+  <!-- Indicadores do carrossel -->
+  <div class="carousel-indicators">
+   <!-- Componente de Indicadores -->
+<app-carousel-indicators
+[items]="items"
+[currentIndex]="currentIndex"
+[setSlide]="setSlide.bind(this)"
+></app-carousel-indicators>
+  </div>
+</div>

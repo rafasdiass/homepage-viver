@@ -1,0 +1,34 @@
+{
+    "conversations": {
+      "conversationId1": {
+        "id": 1,
+        "name": "Suporte Técnico",
+        "phoneNumber": "+5581999999999",
+        "messages": {
+          "messageId1": {
+            "content": "Olá, preciso de ajuda.",
+            "timestamp": "2023-10-01T12:34:56Z",
+            "sender": "user"
+          },
+          "messageId2": {
+            "content": "Claro, em que posso ajudar?",
+            "timestamp": "2023-10-01T12:35:00Z",
+            "sender": "support"
+          }
+        }
+      },
+      "conversationId2": {
+        "id": 2,
+        "name": "Vendas",
+        "phoneNumber": "+5581988888888",
+        "messages": {
+          "messageId1": {
+            "content": "Gostaria de saber mais sobre os produtos.",
+            "timestamp": "2023-10-01T13:00:00Z",
+            "sender": "user"
+          }
+        }
+      }
+    }
+  }
+  

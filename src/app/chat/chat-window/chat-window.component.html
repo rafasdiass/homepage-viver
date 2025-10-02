@@ -1,0 +1,7 @@
+<!-- chat-window.component.html -->
+<div class="chat-window" #scrollContainer>
+  <div *ngFor="let msg of messages" class="message" [ngClass]="msg.sender === identity ? 'user' : 'support'">
+    <span>{{ msg.content }}</span>
+    <span class="timestamp">{{ msg.timestamp | date: 'shortTime' }}</span>
+  </div>
+</div>

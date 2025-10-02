@@ -1,0 +1,22 @@
+<!-- Contêiner com Formulário e Carrossel -->
+<div class="container">
+  <h2>Serviços de Arquitetura</h2>
+
+  <form [formGroup]="solutionForm">
+    <div class="form-group">
+      <label for="solutionSelect">Selecione um serviço:</label>
+      <select id="solutionSelect" formControlName="selectedSolution">
+        <option *ngFor="let solution of solutions" [value]="solution.title">
+          {{ solution.title }}
+        </option>
+      </select>
+    </div>
+  </form>
+
+  <div class="carousel-container">
+    <app-company-carousel
+      #companycarousel
+      [solutions]="solutions"
+    ></app-company-carousel>
+  </div>
+</div>

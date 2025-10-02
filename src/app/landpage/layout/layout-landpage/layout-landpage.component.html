@@ -1,0 +1,16 @@
+<div class="navbar-top">" <app-navbar-top></app-navbar-top></div>
+<div class="container-global">
+  
+ <!-- app.component.html -->
+<div *ngIf="loading$ | async" class="loading-overlay d-flex justify-content-center align-items-center">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Carregando...</span>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+  </div>
+  

@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://www.lacet.tech/lacet-express",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

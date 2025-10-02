@@ -1,0 +1,101 @@
+.contact-form-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #4a5938; // Verde institucional
+    text-align: center;
+    font-weight: 600;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input,
+    textarea {
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:focus {
+        border-color: #4a5938;
+        box-shadow: 0 0 0 2px rgba(74, 89, 56, 0.2);
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4a5938; // Verde institucional
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      background-color: #3b4a2e;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  .alert {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+
+    &.success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    &.error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  }
+}

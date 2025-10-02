@@ -1,0 +1,22 @@
+.container-global {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home, .about {
+  flex: 1;
+  margin-top: 60px; // Isso garante que o início da seção home não seja escondido pelo navbar
+}
+
+@media (min-width: 600px) {
+  .home, .about {
+      margin-top: 80px; // Aumenta a margem superior para telas maiores
+  }
+}
+
+@media (min-width: 900px) {
+  .home, .about {
+      margin-top: 100px; // Aumenta ainda mais a margem superior para telas ainda maiores
+  }
+}
