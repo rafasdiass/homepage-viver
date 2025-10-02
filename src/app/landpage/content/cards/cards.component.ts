@@ -10,13 +10,13 @@ import { Component } from '@angular/core';
 })
 export class CardsComponent {
   cardItems = [
-    { title: 'Arquitetura Residencial', icon: 'bi-house' },
-    { title: 'Arquitetura Comercial', icon: 'bi-building' },
-    { title: 'Arquitetura Corporativa', icon: 'bi-briefcase' },
-    { title: 'Projetos de Estrutura', icon: 'bi-gear' },
-    { title: 'Projetos Hidrossanitários', icon: 'bi-water' },
-    { title: 'Projetos Elétricos', icon: 'bi-lightning' },
-    { title: 'PGRCC', icon: 'bi-archive' },
-    { title: 'Gestão de Obra', icon: 'bi-tools' },
+    { title: 'Cooperativismo Habitacional', icon: 'bi-people' },
+    { title: 'Empreendimentos Residenciais', icon: 'bi-house' },
+    { title: 'Assessoria Completa', icon: 'bi-clipboard-check' },
+    { title: 'Financiamento e Crédito', icon: 'bi-currency-dollar' },
+    { title: 'Documentação e Legalização', icon: 'bi-file-earmark-text' },
+    { title: 'Acompanhamento Personalizado', icon: 'bi-person-check' },
+    { title: 'Entrega das Chaves', icon: 'bi-key' },
+    { title: 'Pós-Entrega', icon: 'bi-house-check' },
   ];
 }

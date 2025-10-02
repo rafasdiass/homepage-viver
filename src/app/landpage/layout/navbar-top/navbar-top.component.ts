@@ -38,7 +38,7 @@ export class NavbarTopComponent implements OnInit {
 
     if (secaoId === 'login') {
       this.navigationService.navigateToRoute('/login');
-    } else if (secaoId === 'lacet-express' || secaoId === 'macenaria') {
+    } else if (secaoId === 'empreendimentos' || secaoId === 'como-funciona') {
       this.navigationService.navigateToRoute(`/${secaoId}`);
     } else {
       this.navigationService.navigateToSection(secaoId);

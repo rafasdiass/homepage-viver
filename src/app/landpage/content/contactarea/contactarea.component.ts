@@ -1,12 +1,13 @@
+// src/app/landpage/content/contactarea/contactarea.component.ts
 import { Component } from '@angular/core';
-// import { ContactTextComponent } from './contact-text/contact-text.component';
+import { CommonModule } from '@angular/common';
 import { ContactFormComponent } from './contactform/contactform.component';
 
 @Component({
   selector: 'app-contactarea',
   standalone: true,
-  imports: [ ContactFormComponent],
+  imports: [CommonModule, ContactFormComponent],  // agora funciona
   templateUrl: './contactarea.component.html',
   styleUrls: ['./contactarea.component.scss']
 })
-export class ContactareaComponent {}
+export class ContactAreaComponent {}
