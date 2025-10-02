@@ -1,52 +1,48 @@
 <div class="custom-footer container-fluid">
   <div class="row justify-content-center text-center text-md-left">
-
     <!-- Sobre -->
     <div class="custom-footer-section col-md-3 mb-4 mb-md-0">
-      <h6>Sobre a Volent</h6>
-      <hr>
+      <h6>Sobre a Viver Mais</h6>
+      <hr />
       <p>
-        Na Volent, projetamos com precisão, inovação e sustentabilidade.
-        Somos pioneiros no Ceará em BIM, transformando a forma de
-        conceber e gerenciar obras para gerar valor em cada detalhe.
+        A Cooperativa Habitacional Viver Mais permite que pessoas conquistem a casa própria colaborando financeiramente em projetos habitacionais, sem depender de bancos, comprovação de renda ou consultas ao SPC/Serasa, com a cooperativa gerenciando todo o processo.
       </p>
     </div>
 
     <!-- Contato - Matriz -->
     <div class="custom-footer-section col-md-3 mb-4 mb-md-0">
       <h6>Matriz</h6>
-      <hr>
-      <p><i class="bi bi-geo-alt-fill"></i> {{ matriz.endereco }} - {{ matriz.cep }}</p>
+      <hr />
+      <p>
+        <i class="bi bi-geo-alt-fill"></i> {{ matriz.endereco }} -
+        {{ matriz.cep }}
+      </p>
       <p><i class="bi bi-telephone-fill"></i> {{ matriz.telefone }}</p>
       <p><i class="bi bi-envelope-fill"></i> {{ email }}</p>
     </div>
 
-    <!-- Contato - Filiais -->
-    <div class="custom-footer-section col-md-3 mb-4 mb-md-0">
-      <h6>Filiais</h6>
-      <hr>
-      <ng-container *ngFor="let filial of filiais">
-        <p><i class="bi bi-geo-alt-fill"></i> {{ filial.endereco }} - {{ filial.cep }}</p>
-        <p><i class="bi bi-telephone-fill"></i> {{ filial.telefone }}</p>
-      </ng-container>
-    </div>
 
     <!-- Social -->
     <div class="custom-footer-section col-md-3">
       <h6>Conecte-se</h6>
-      <hr>
+      <hr />
       <div class="social-links">
-        <a [href]="facebookLink" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a [href]="instagramLink" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a [href]="linkedinLink" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a [href]="whatsappLink" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        <a [href]="instagramLink" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        <a [href]="youtubeLink" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+        <a [href]="whatsappLink" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+      </div>
+
+      <div class="contact-info">
+        <p><i class="bi bi-telephone"></i> {{ telefone }}</p>
+        <p><i class="bi bi-envelope"></i> {{ email }}</p>
       </div>
     </div>
-
   </div>
 
   <!-- Copyright -->
   <div class="footer-bottom text-center mt-4">
-    <p>&copy; {{ currentYear }} Volent Arquitetura. Todos os direitos reservados.</p>
+    <p>
+      &copy; {{ currentYear }} ViverMais. Todos os direitos reservados
+    </p>
   </div>
 </div>

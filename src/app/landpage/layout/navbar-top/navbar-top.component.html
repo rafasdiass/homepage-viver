@@ -1,6 +1,12 @@
 <mat-toolbar class="navbar-top">
   <!-- Logo -->
-  <div class="logo"></div>
+  <div class="logo">
+    <img src="assets/logos/logovivermais.jpeg" alt="Viver Mais Cooperativa Habitacional" class="logo-img">
+    <div class="logo-text">
+      <span class="logo-main">VIVER MAIS</span>
+      <span class="logo-sub">COOPERATIVA HABITACIONAL</span>
+    </div>
+  </div>
 
   <span class="spacer"></span>
 
@@ -16,10 +22,7 @@
       <mat-icon>mail</mat-icon> Seu Projeto
     </button>
     <button mat-button (click)="navegarPara('lacet-express', $event)">
-      <mat-icon>shopping_bag</mat-icon> Lacet Express
-    </button>
-    <button mat-button (click)="navegarPara('macenaria', $event)">
-      <mat-icon>handyman</mat-icon> Marcenaria
+      <mat-icon>shopping_bag</mat-icon> Viver Mais
     </button>
   </nav>
 
@@ -40,10 +43,7 @@
       <mat-icon>mail</mat-icon> Seu Projeto
     </button>
     <button mat-menu-item (click)="navegarPara('lacet-express', $event)">
-      <mat-icon>shopping_bag</mat-icon> Lacet Express
-    </button>
-    <button mat-menu-item (click)="navegarPara('macenaria', $event)">
-      <mat-icon>handyman</mat-icon> Marcenaria
+      <mat-icon>shopping_bag</mat-icon> Viver Mais
     </button>
 
     <mat-divider></mat-divider>

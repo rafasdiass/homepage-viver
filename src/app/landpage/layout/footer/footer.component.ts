@@ -9,32 +9,23 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
 })
 export class FooterComponent {
-  email: string = 'contato@volent.com.br';
+  email: string = 'atendimento@vivemaiscooperativa.com.br';
 
   matriz = {
-    endereco: 'R. Ary Barroso, 70, Sala 716 e 717 - Papicu, Fortaleza - CE',
-    cep: '60175-705',
-    telefone: '(85) 9601-5923'
+    endereco: 'Rod Salvador de Leone, 2701 - Embu Mirim, Itapecerica da Serra - SP',
+    cep: '06853-000',
+    telefone: '(11) 99024-0313'
   };
 
-  filiais = [
-    {
-      endereco: 'Av. Pacífico, 731, Sala 603 - Cidade Alpha, Eusébio - CE',
-      cep: '61.761-850',
-      telefone: '(85) 99900-3739'
-    },
-    {
-      endereco: 'Rua Treze de Maio, 31, Sala 03 - Centro, Campina Grande - PB',
-      cep: '58400-290',
-      telefone: '(83) 98626-1332'
-    }
-  ];
 
   // Social Links
-  facebookLink: string = 'https://www.facebook.com/volent';
-  instagramLink: string = 'https://www.instagram.com/volent/';
-  linkedinLink: string = 'https://www.linkedin.com/company/volent/';
-  whatsappLink: string = 'https://wa.me/558596015923';
+  instagramLink: string = 'https://www.instagram.com/vivermais.sp';
+  youtubeLink: string = 'https://www.youtube.com/@ViverMaisCoop';
+  whatsappLink: string = 'https://wa.me/5511990240313';
+
+  // Contact Info
+  telefone: string = '+55 11 4210-4648';
+  emailLink: string = 'atendimento@vivemaiscooperativa.com.br';
 
   // ✅ Ano atual calculado no TS
   currentYear: number = new Date().getFullYear();

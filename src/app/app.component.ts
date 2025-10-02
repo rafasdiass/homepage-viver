@@ -13,19 +13,19 @@ import { NavbarTopComponent } from './landpage/layout/navbar-top/navbar-top.comp
   standalone: true,
   imports: [
     RouterOutlet,
-   
+
     FooterComponent,
     LayoutLandpageComponent,
     NavbarTopComponent,
- 
-   
+
+
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'], // Isso deve ser styleUrls, não styleUrl
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'front-orcamento';
 
   // Injetar o ScrollPositionService no construtor
-  constructor() {}
+  constructor() { }
 }
